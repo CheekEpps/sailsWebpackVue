@@ -2,6 +2,7 @@
 ````
 git clone https://github.com/CheekEpps/sailsWebpackVue.git
 cd sailsWebpackVue
+npm i
 ````
 # start
 ````
