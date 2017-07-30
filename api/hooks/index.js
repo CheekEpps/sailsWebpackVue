@@ -24,7 +24,6 @@ module.exports = function (sails) {
       }
     },
     initialize (cb) {
-      console.info("==========index.js,25==========\n", 'initialize')
       return cb();
     }
   }

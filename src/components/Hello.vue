@@ -12,40 +12,40 @@
     </ul>
     <h2>weihsengaas</h2>
     <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">ddsdsd</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">ss</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">sasa</a></li>
+      <li><a href="http://router.vuejs.org/" target="_blank">vue</a></li>
+      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'dsds'
+  export default {
+    name: 'hello',
+    data () {
+      return {
+        msg: 'Vue'
+      }
     }
   }
-}
 </script>
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 </style>
