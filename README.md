@@ -1,4 +1,9 @@
-# 启动运行
+# install
+````
+git clone https://github.com/CheekEpps/sailsWebpackVue.git
+cd sailsWebpackVue
+````
+# start
 ````
 # production
 sails l --prod
