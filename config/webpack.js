@@ -41,25 +41,75 @@ module.exports.webpack = {
     module: {
       rules: [
         {
+          test: /\.less$/,
+          use: [
+            {loader: "style-loader"},
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                minimize: true
+              }
+            },
+            {
+              loader: "less-loader",
+              options: {
+                strictMath: true,
+                noIeCompat: true
+              }
+            }]
+        },
+        {
           test: /\.js?$/,
           use: [
-            'babel-loader',
+            'babel-loader'
           ],
-          exclude:[
-            path.resolve("./node_modules"),
+          exclude: [
+            path.resolve("./node_modules")
           ]
         },
         {
           test: /\.vue$/,
-          loader: 'vue-loader',
+          loader: 'vue-loader'
         },
-        {
-          test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        /*{
+          test: /\.(png|jpg|jpe?g|gif|svg)(\?.*)?$/,
           loader: 'url-loader',
           options: {
             limit: 10000,
           }
+        },*/
+        {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [
+            'file-loader',
+            {
+              loader: 'image-webpack-loader',
+              query: {
+                progressive: true,
+                optimizationLevel: 7,
+                interlaced: false,
+                pngquant: {
+                  quality: '65-90',
+                  speed: 4
+                }
+              }
+            }
+          ]
         },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                minimize: true
+              }
+            }
+          ]
+        }
 
       ]
     },
@@ -69,7 +119,8 @@ module.exports.webpack = {
         'vue$': 'vue/dist/vue.esm.js',
         '@': resolve('src')
       }
-    }
+    },
+    externals: {jquery: "jQuery"}
   },
   // ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ options
 

@@ -119,3 +119,4 @@ nbproject
 .node_history
 /package-lock.json
 /.gitignore
+/src/assets/
