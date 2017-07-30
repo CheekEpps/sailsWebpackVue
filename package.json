@@ -18,10 +18,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/root/b.git"
+    "url": "git://github.com/CheekEpps/sailsWebpackVue.git"
   },
-  "author": "root",
-  "license": "",
+  "author": "Cheek Epps",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
